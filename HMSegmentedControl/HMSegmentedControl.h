@@ -14,7 +14,7 @@ typedef void (^IndexChangeBlock)(NSInteger index);
 typedef NSAttributedString *(^HMTitleFormatterBlock)(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected);
 
 typedef enum {
-    HMSegmentedControlSelectionStyleTextWidthStripe, // Indicator width will only be as big as the text width
+    HMSegmentedControlSelectionStyleTextWidthStripe, // Indicator width will only be as big as the text width  qmk_mod 添加了一个8的延伸宽度
     HMSegmentedControlSelectionStyleFullWidthStripe, // Indicator width will fill the whole segment
     HMSegmentedControlSelectionStyleBox, // A rectangle that covers the whole segment
     HMSegmentedControlSelectionStyleArrow // An arrow in the middle of the segment pointing up or down depending on `HMSegmentedControlSelectionIndicatorLocation`
@@ -23,7 +23,7 @@ typedef enum {
 typedef enum {
     HMSegmentedControlSelectionIndicatorLocationUp,
     HMSegmentedControlSelectionIndicatorLocationDown,
-	HMSegmentedControlSelectionIndicatorLocationNone // No selection indicator
+    HMSegmentedControlSelectionIndicatorLocationNone // No selection indicator
 } HMSegmentedControlSelectionIndicatorLocation;
 
 typedef enum {
@@ -46,7 +46,7 @@ enum {
 typedef enum {
     HMSegmentedControlTypeText,
     HMSegmentedControlTypeImages,
-	HMSegmentedControlTypeTextImages
+    HMSegmentedControlTypeTextImages
 } HMSegmentedControlType;
 
 @interface HMSegmentedControl : UIControl
@@ -54,6 +54,7 @@ typedef enum {
 @property (nonatomic, strong) NSArray *sectionTitles;
 @property (nonatomic, strong) NSArray *sectionImages;
 @property (nonatomic, strong) NSArray *sectionSelectedImages;
+
 
 /**
  Provide a block to be executed when selected index is changed.
@@ -201,9 +202,9 @@ typedef enum {
  When HMSegmentedControlSelectionIndicatorLocationDown is selected, top edge insets are not used
  
  Defaults are top: 0.0f
-             left: 0.0f
-           bottom: 0.0f
-            right: 0.0f
+ left: 0.0f
+ bottom: 0.0f
+ right: 0.0f
  */
 @property (nonatomic, readwrite) UIEdgeInsets selectionIndicatorEdgeInsets;
 
