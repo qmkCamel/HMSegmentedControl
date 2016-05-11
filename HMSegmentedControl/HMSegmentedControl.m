@@ -232,7 +232,7 @@
         NSAssert(title == nil, @"Unexpected type of segment title: %@", [title class]);
         size = CGSizeZero;
     }
-    return CGRectIntegral((CGRect){CGPointZero, CGSizeMake(size.width, self.size.height)}).size;
+    return CGRectIntegral((CGRect){CGPointZero, CGSizeMake(size.width, self.frame.size.height)}).size;
 }
 
 - (NSAttributedString *)attributedTitleAtIndex:(NSUInteger)index {
